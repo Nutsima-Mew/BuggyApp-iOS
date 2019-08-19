@@ -70,7 +70,7 @@ extension MusicTracksViewController: UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    self.performSegue(withIdentifier: "showDetail", sender: tracks[indexPath.row])
     tableView.deselectRow(at: indexPath, animated: true)
-    self.performSegue(withIdentifier: "showDetail", sender: self)
   }
 }
