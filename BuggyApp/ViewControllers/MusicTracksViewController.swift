@@ -8,9 +8,10 @@
 
 import UIKit
 
-class MusicTracksViewController: UIViewController {
+class MusicTracksViewController: UIViewController{
   
   @IBOutlet weak var tableView: UITableView!
+  
   
   var tracks: [Track] = [] {
     didSet {
@@ -41,6 +42,8 @@ class MusicTracksViewController: UIViewController {
       let viewController = segue.destination as? MusicTrackDetailViewController,
       let selectedTrack = sender as? Track {
       viewController.track = selectedTrack
+        
+      self.performSegue(withIdentifier: "showDetail", sender: self)
     }
   }
 }

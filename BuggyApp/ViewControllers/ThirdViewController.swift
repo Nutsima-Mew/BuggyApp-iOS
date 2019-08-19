@@ -9,8 +9,24 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
+    
+    @IBOutlet weak var mTextName: UITextField!
+    
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    
+    
   }
+    
+    @IBAction func InputName(){
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Show keyboard by default
+        self.mTextName.becomeFirstResponder()
+    }
+    
 }
