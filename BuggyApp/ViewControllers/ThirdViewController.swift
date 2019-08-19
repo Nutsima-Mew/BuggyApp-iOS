@@ -19,7 +19,8 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     
   }
     
-    func perform(){
+
+    func performEnter(){
         let storyBoard: UIStoryboard = UIStoryboard(name: "Third", bundle: nil)
         let vc = storyBoard.instantiateViewController(withIdentifier: "NameStoryboard") as! NameViewController
         vc.name = self.mTextName.text
@@ -28,7 +29,7 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        perform()
+        performEnter()
         
         return true
     }

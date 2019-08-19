@@ -39,7 +39,6 @@
                     <navigationItem key="navigationItem" id="G7N-dU-juY"/>
                     <connections>
                         <outlet property="mTextName" destination="sDg-t6-bVR" id="LyL-c1-6rV"/>
-                        <segue destination="H26-Yz-hB1" kind="show" id="1v1-Oa-m7v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F34-4h-Wlb" userLabel="First Responder" sceneMemberID="firstResponder"/>
