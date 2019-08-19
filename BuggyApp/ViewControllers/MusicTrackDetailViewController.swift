@@ -10,7 +10,7 @@ import UIKit
 
 class MusicTrackDetailViewController: UIViewController {
   
-  var track: Track?
+  var track: Track!
   var dateFormatter: ISO8601DateFormatter {
     let dateFormatter = ISO8601DateFormatter()
     dateFormatter.formatOptions = [.withFullDate, .withDashSeparatorInDate]

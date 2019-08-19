@@ -32,14 +32,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1w-9c-YUZ">
-                                <rect key="frame" x="189" y="506" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Enter"/>
-                                <connections>
-                                    <segue destination="H26-Yz-hB1" kind="show" id="O4K-MW-ae1"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="J4c-v2-bSr"/>
@@ -47,6 +39,7 @@
                     <navigationItem key="navigationItem" id="G7N-dU-juY"/>
                     <connections>
                         <outlet property="mTextName" destination="sDg-t6-bVR" id="LyL-c1-6rV"/>
+                        <segue destination="H26-Yz-hB1" kind="show" id="1v1-Oa-m7v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F34-4h-Wlb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -56,7 +49,7 @@
         <!--Name View Controller-->
         <scene sceneID="QMZ-Ve-tYs">
             <objects>
-                <viewController id="H26-Yz-hB1" customClass="NameViewController" customModule="BuggyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NameStoryboard" id="H26-Yz-hB1" customClass="NameViewController" customModule="BuggyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oVr-mX-rOa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,6 +72,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fyy-eJ-zHb"/>
                     </view>
+                    <connections>
+                        <outlet property="mShowName" destination="qzn-ya-Bj7" id="nuj-5O-SH4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCR-wj-V7R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

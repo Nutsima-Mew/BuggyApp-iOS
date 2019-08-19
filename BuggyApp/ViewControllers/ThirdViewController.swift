@@ -8,25 +8,29 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class ThirdViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var mTextName: UITextField!
     
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    mTextName.delegate = self
     
   }
     
-    @IBAction func InputName(){
-        
+    func perform(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Third", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "NameStoryboard") as! NameViewController
+        vc.name = self.mTextName.text
+        navigationController?.pushViewController(vc, animated: true)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        perform()
         
-        // Show keyboard by default
-        self.mTextName.becomeFirstResponder()
+        return true
     }
     
 }

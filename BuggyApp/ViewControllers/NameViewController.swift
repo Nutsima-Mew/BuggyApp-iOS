@@ -12,13 +12,15 @@ class NameViewController: UIViewController {
     
     @IBOutlet weak var mShowName:UILabel!
     
-    var mInputName: ThirdViewController = ThirdViewController()
+    var name: String!
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        self.mShowName!.text = self.mInputName.mTextName!.text
+     
+        self.mShowName.text = name
+        
     }
     
    

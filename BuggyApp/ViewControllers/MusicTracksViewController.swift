@@ -50,7 +50,8 @@ class MusicTracksViewController: UIViewController{
 
 extension MusicTracksViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return tracks.isEmpty ? 0 : 10
+    let count = self.tracks.count
+    return tracks.isEmpty ? 0 : count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
